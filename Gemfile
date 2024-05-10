@@ -69,7 +69,7 @@ gem 'omniauth-github', '~> 2.0' # Authentication to GitHub (get project info)
 # a third party that *does* fix it. I don't know the person who created
 # this shim, but I reviewed the code and it looks okay.
 # At one time I did this:
-# gem 'omniauth-rails_csrf_protection',
+# gem 'omniauth-rails_csrf_protection', '>= 1.0.2',
 #    git: 'https://github.com/cookpad/omniauth-rails_csrf_protection.git',
 #    ref: 'b33ff2e57f7c0530da76da6b4b358218f1e7f230'
 # to provide a stronger guarantee that what I reviewed is what will
