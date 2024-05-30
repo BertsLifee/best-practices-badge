@@ -21,9 +21,9 @@ ruby File.read('.ruby-version').strip
 # Loading only what we use reduces memory use & attack surface.
 # gem 'actioncable' # Not used. Client/server comm channel.
 # gem 'activestorage' # Not used. Attaches cloud files to ActiveRecord.
-gem 'actionmailer', '~> 7.0.7' # Rails. Send email.
-gem 'actionpack', '~> 7.0.7' # Rails. MVC framework.
-gem 'actionview', '~> 7.0.7' # Rails. View.
+gem 'actionmailer', '~> 7.0.8', '>= 7.0.8.1' # Rails. Send email.
+gem 'actionpack', '~> 7.0.8', '>= 7.0.8.1' # Rails. MVC framework.
+gem 'actionview', '~> 7.0.8', '>= 7.0.8.1' # Rails. View.
 gem 'activejob', '~> 7.0.7' # Rails. Async jobs.
 gem 'activemodel', '~> 7.0.7' # Rails. Model basics.
 gem 'activerecord', '~> 7.0.7' # Rails. ORM and query system.
@@ -48,9 +48,9 @@ gem 'font-awesome-rails', '~> 4.7'
 gem 'http_accept_language', '~> 2.1' # Determine user's preferred locale
 gem 'httparty' # HTTP convenience. rake fix_use_gravatar
 gem 'imagesLoaded_rails', '~> 4.1' # JavaScript - enable wait for image load
-gem 'jbuilder', '~> 2.11' # Template mechanism for JSON format results
+gem 'jbuilder', '~> 2.12', '>= 2.12.0' # Template mechanism for JSON format results
 gem 'jquery-rails', '~> 4.4' # JavaScript jQuery library (for Rails)
-gem 'jquery-ui-rails', '~> 6.0' # JavaScript jQueryUI library (for Rails)
+gem 'jquery-ui-rails', '~> 7.0', '>= 7.0.0' # JavaScript jQueryUI library (for Rails)
 gem 'lograge', '~> 0.12' # Simplify logs
 gem 'mail', '~> 2.7' # Ruby mail handler
 #
@@ -69,7 +69,7 @@ gem 'omniauth-github', '~> 2.0' # Authentication to GitHub (get project info)
 # a third party that *does* fix it. I don't know the person who created
 # this shim, but I reviewed the code and it looks okay.
 # At one time I did this:
-# gem 'omniauth-rails_csrf_protection',
+# gem 'omniauth-rails_csrf_protection', '>= 1.0.2',
 #    git: 'https://github.com/cookpad/omniauth-rails_csrf_protection.git',
 #    ref: 'b33ff2e57f7c0530da76da6b4b358218f1e7f230'
 # to provide a stronger guarantee that what I reviewed is what will
@@ -93,10 +93,10 @@ gem 'rack-headers_filter', '~> 0.0.1' # Filter out "dangerous" headers
 # but instead load only what we use (to reduce memory use and attack surface).
 # We load sprockets-rails, but its version number isn't kept in sync.
 # Note: Update the gem versions of action* and railties in sync.
-gem 'railties', '~> 7.0.7' # Rails. Rails core, loads rest of Rails
-gem 'rails-i18n', '~> 7.0.7' # Localizations for Rails built-ins
+gem 'railties', '~> 7.0.8', '>= 7.0.8.1' # Rails. Rails core, loads rest of Rails
+gem 'rails-i18n', '~> 7.0.9' # Localizations for Rails built-ins
 gem 'redcarpet', '~> 3.5' # Process markdown in form textareas (justifications)
-gem 'sass-rails', '~> 5.1', require: false # For .scss files (CSS extension)
+gem 'sass-rails', '~> 6.0', '>= 6.0.0', require: false # For .scss files (CSS extension)
 gem 'scout_apm' # Monitor for memory leaks
 gem 'secure_headers', '~> 6.3' # Add hardening measures to HTTP headers
 # WARNING!!!!
@@ -107,13 +107,13 @@ gem 'secure_headers', '~> 6.3' # Add hardening measures to HTTP headers
 gem 'sprockets-rails', '3.4.2' # Rails. Asset precompilation
 gem 'uglifier', '~> 4.2.0', require: false # Minify JavaScript
 gem 'sentry-ruby'
-gem 'sentry-rails'
+gem 'sentry-rails', '>= 5.12.0'
 
 group :development, :test do
   gem 'awesome_print' # Pretty print Ruby objects
   gem 'bullet' # Avoid n+1 queries
   gem 'bundler-audit'
-  gem 'dotenv-rails', '~> 2.7'
+  gem 'dotenv-rails', '~> 3.0', '>= 3.0.0'
   gem 'eslintrb'
   gem 'json', '~> 2.0'
   gem 'license_finder', '~> 7.0'
@@ -151,7 +151,7 @@ group :development do
   # We bring in full rails in development in case we need it for debugging;
   # this also keeps some gems happy that don't realize that loading
   # only *parts* of Rails is fine:
-  gem 'rails', '~> 7.0.7' # Rails (our web framework)
+  gem 'rails', '~> 7.0.8', '>= 7.0.8.1' # Rails (our web framework)
   # To update the translation gem, see the process docs in doc/testing.md
   gem 'translation', '1.37' # translation.io - translation service
   gem 'web-console' # In-browser debugger; use <% console %> or console
