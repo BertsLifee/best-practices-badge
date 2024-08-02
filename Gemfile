@@ -116,19 +116,19 @@ group :development, :test do
   gem 'dotenv-rails', '~> 2.7'
   gem 'eslintrb'
   gem 'json', '~> 2.0'
-  gem 'license_finder', '~> 7.0'
-  gem 'mdl', '0.12.0'
+  gem 'license_finder', '~> 7.2', '>= 7.2.0'
+  gem 'mdl', '0.13.0'
   # NOTE: If you update pronto you may need to update other pronto-* gems
-  gem 'pronto', '0.11.1'
+  gem 'pronto', '0.11.2'
   # TODO: Use pronto-railroader, once there is one.
   # gem 'pronto-brakeman', '0.9.1'
   gem 'pronto-eslint', '0.11.1'
   gem 'pronto-rails_best_practices', '0.11.0'
   gem 'pronto-rubocop', '0.11.5'
   # gem 'railroader', '4.3.8' # Security static analyzer. OSS fork of Brakeman
-  gem 'rubocop', '1.57.0', require: false # Style checker
-  gem 'rubocop-performance', '1.19.1', require: false # Performance cops
-  gem 'rubocop-rails', '2.21.2', require: false # Rails-specific cops
+  gem 'rubocop', '1.57.1', require: false # Style checker
+  gem 'rubocop-performance', '1.20.0', require: false # Performance cops
+  gem 'rubocop-rails', '2.22.0', require: false # Rails-specific cops
   gem 'ruby-graphviz', '1.2.5' # This is used for bundle viz
   gem 'spring', '~> 4.1'
   # Do NOT upgrade to vcr 6.*, as that is not OSS:
@@ -164,10 +164,10 @@ group :test do
   gem 'minitest-retry', require: false # Avoid Capybara false positives
   # Note: Updating 'rails-controller-testing' to '1.0.5' causes failures
   gem 'rails-controller-testing', '~> 1.0' # for `assigns` and `assert_template`
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '>= 4.11.0'
   # We don't list "simplecov"; code depends on it & brings it in
   gem 'webdrivers'
-  gem 'webmock', '~> 3.0', require: false
+  gem 'webmock', '~> 3.20', '>= 3.20.0', require: false
 end
 
 group :production do
