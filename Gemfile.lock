@@ -216,6 +216,7 @@ GEM
       mixlib-shellout
     method_source (1.0.0)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.7)
     minitest (5.20.0)
     minitest-reporters (1.6.1)
       ansi
@@ -241,7 +242,10 @@ GEM
       timeout
     net-smtp (0.4.0)
       net-protocol
-    nio4r (2.5.9)
+    nio4r (2.7.3)
+    nokogiri (1.15.4)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
     oauth2 (2.0.9)
@@ -307,7 +311,7 @@ GEM
       byebug (~> 11.0)
       pry (>= 0.13, < 0.15)
     public_suffix (5.0.3)
-    puma (6.4.0)
+    puma (6.4.3)
       nio4r (~> 2.0)
     puma_worker_killer (0.3.1)
       get_process_mem (~> 0.2)
@@ -500,6 +504,7 @@ GEM
     zeitwerk (2.6.12)
 
 PLATFORMS
+  ruby
   x86_64-linux
 
 DEPENDENCIES
@@ -554,7 +559,7 @@ DEPENDENCIES
   pronto-rails_best_practices (= 0.11.0)
   pronto-rubocop (= 0.11.5)
   pry-byebug
-  puma (~> 6.3)
+  puma (~> 6.4, >= 6.4.3)
   puma_worker_killer (~> 0.3)
   rack-attack (~> 6.7)
   rack-cors (~> 2.0)
@@ -587,7 +592,7 @@ DEPENDENCIES
   yaml-lint (~> 0.1.2)
 
 RUBY VERSION
-   ruby 3.2.2p53
+   ruby 2.7.8p225
 
 BUNDLED WITH
    2.4.17
