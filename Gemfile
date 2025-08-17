@@ -26,7 +26,7 @@ gem 'actionpack', '~> 7.0.7' # Rails. MVC framework.
 gem 'actionview', '~> 7.0.7' # Rails. View.
 gem 'activejob', '~> 7.0.7' # Rails. Async jobs.
 gem 'activemodel', '~> 7.0.7' # Rails. Model basics.
-gem 'activerecord', '~> 7.0.7' # Rails. ORM and query system.
+gem 'activerecord', '~> 7.1.5', '>= 7.1.5.2' # Rails. ORM and query system.
 # gem 'activestorage' # Not used. Attaches cloud files to ActiveRecord.
 gem 'activesupport', '~> 7.0.7' # Rails. Underlying library.
 # gem 'activetext' # Not used. Text editor that fails to support markdown.
@@ -81,9 +81,9 @@ gem 'omniauth-github', '~> 2.0' # Authentication to GitHub (get project info)
 gem 'omniauth-rails_csrf_protection'
 gem 'pagy', '~> 6.0'
 gem 'paleta', '~> 0.3' # Color manipulation, used for badges
-gem 'paper_trail', '~> 12.3' # Record previous versions of project data
+gem 'paper_trail', '~> 13.0', '>= 13.0.0' # Record previous versions of project data
 gem 'pg', '~> 1.4' # PostgreSQL database, used for data storage
-gem 'pg_search', '~> 2.3' # PostgreSQL full-text search
+gem 'pg_search', '~> 2.3', '>= 2.3.7' # PostgreSQL full-text search
 gem 'puma', '~> 6.3' # Faster webserver; recommended by Heroku
 gem 'puma_worker_killer', '~> 0.3' # Band-aid: Restart to limit memory use
 gem 'rack-attack', '~> 6.7' # Implement rate limiting
@@ -151,7 +151,7 @@ group :development do
   # We bring in full rails in development in case we need it for debugging;
   # this also keeps some gems happy that don't realize that loading
   # only *parts* of Rails is fine:
-  gem 'rails', '~> 7.0.7' # Rails (our web framework)
+  gem 'rails', '~> 7.1.5', '>= 7.1.5.2' # Rails (our web framework)
   # To update the translation gem, see the process docs in doc/testing.md
   gem 'translation', '1.37' # translation.io - translation service
   gem 'web-console' # In-browser debugger; use <% console %> or console
