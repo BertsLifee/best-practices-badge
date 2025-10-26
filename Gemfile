@@ -49,10 +49,10 @@ gem 'http_accept_language', '~> 2.1' # Determine user's preferred locale
 gem 'httparty' # HTTP convenience. rake fix_use_gravatar
 gem 'imagesLoaded_rails', '~> 4.1' # JavaScript - enable wait for image load
 gem 'jbuilder', '~> 2.11' # Template mechanism for JSON format results
-gem 'jquery-rails', '~> 4.4' # JavaScript jQuery library (for Rails)
+gem 'jquery-rails', '~> 4.6', '>= 4.6.1' # JavaScript jQuery library (for Rails)
 gem 'jquery-ui-rails', '~> 6.0' # JavaScript jQueryUI library (for Rails)
 gem 'lograge', '~> 0.12' # Simplify logs
-gem 'mail', '~> 2.7' # Ruby mail handler
+gem 'mail', '~> 2.9', '>= 2.9.0' # Ruby mail handler
 #
 gem 'octokit', '~> 6.1' # GitHub's official Ruby API
 gem 'omniauth-github', '~> 2.0' # Authentication to GitHub (get project info)
