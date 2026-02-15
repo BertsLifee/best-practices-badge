@@ -39,7 +39,7 @@ gem 'bootstrap_form', '~> 2.7'
 gem 'bundler' # Ensure it's available
 # Note: if webpacker is used, see chartkick website for added instructions
 gem 'chartkick', '~> 4.0' # Chart project_stats
-gem 'faraday-retry', '~> 2.1' # Force retry of faraday requests for reliability
+gem 'faraday-retry', '~> 2.2', '>= 2.2.1' # Force retry of faraday requests for reliability
 # We no longger use "fastly-rails"; it doesn't support Rails 6+.
 # They recommend switching to the "fastly" gem (aka "fastly-ruby"),
 # but fastly-ruby is not designed to support multi-threading, so we
@@ -54,7 +54,7 @@ gem 'jquery-ui-rails', '~> 6.0' # JavaScript jQueryUI library (for Rails)
 gem 'lograge', '~> 0.12' # Simplify logs
 gem 'mail', '~> 2.7' # Ruby mail handler
 #
-gem 'octokit', '~> 6.1' # GitHub's official Ruby API
+gem 'octokit', '~> 7.0', '>= 7.0.0' # GitHub's official Ruby API
 gem 'omniauth-github', '~> 2.0' # Authentication to GitHub (get project info)
 #
 # Counter CVE-2015-9284 in the omniauth 1.X series.
@@ -119,12 +119,12 @@ group :development, :test do
   gem 'license_finder', '~> 7.0'
   gem 'mdl', '0.12.0'
   # NOTE: If you update pronto you may need to update other pronto-* gems
-  gem 'pronto', '0.11.1'
+  gem 'pronto', '0.11.2'
   # TODO: Use pronto-railroader, once there is one.
   # gem 'pronto-brakeman', '0.9.1'
   gem 'pronto-eslint', '0.11.1'
   gem 'pronto-rails_best_practices', '0.11.0'
-  gem 'pronto-rubocop', '0.11.5'
+  gem 'pronto-rubocop', '0.11.6'
   # gem 'railroader', '4.3.8' # Security static analyzer. OSS fork of Brakeman
   gem 'rubocop', '1.57.0', require: false # Style checker
   gem 'rubocop-performance', '1.19.1', require: false # Performance cops
